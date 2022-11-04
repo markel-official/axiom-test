@@ -1,0 +1,41 @@
+/* Mixin */
+@mixin background-size($path) {
+    background-size: $path;
+    -webkit-background-size: $path;
+    -o-background-size: $path;
+    -moz-background-size: $path;
+}
+
+@mixin transform($property) {
+    transform: $property;
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    -moz-transform: $property;
+    -o-transform: $property;
+}
+
+@mixin margin-center() {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin abs-center() {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+@mixin flex-center() {
+    justify-content: center;
+    align-items: center;
+}
+@mixin absolute-pos-cover() {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+@mixin circle($diameter, $radius) {
+    width: $diameter;
+    height: $diameter;
+    border-radius: $radius;
+}

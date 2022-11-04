@@ -1,0 +1,41 @@
+.socials__item {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	width: 54px;
+	height: 54px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.54), inset 0 12px 0 rgba(255, 255, 255, 0.89);
+	background-color: #ffffff;
+	background-image: linear-gradient(to bottom, #e3e3e3 0%, #e3e3e3 6%, #d2d2d2 51%, #a8a8a8 100%);
+}
+
+.socials__link {
+	position: absolute;
+	@include absolute-pos-cover();
+}
+
+.socials__icon {
+	path {
+		transition: fill $transition-time-ease;
+		fill: #828282;
+	}
+}
+
+.socials__item + .socials__item {
+	margin-left: 22px;
+}
+
+.socials__item:hover, .socials__item:focus {
+	.socials__icon.socials__icon--facebook {
+		path {
+			fill: #4267B2;
+		}
+	}
+	.socials__icon.socials__icon--twitter {
+		path {
+			fill: #1DA1F2;
+		}
+	}
+}

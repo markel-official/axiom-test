@@ -1,0 +1,25 @@
+// Effects ->
+.link-effect {
+	position: relative;
+	padding-bottom: 5px;
+
+	&::before {
+		content: "";
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		height: 1px;
+		background-color: currentColor;
+		transform: scale3d(0, 1, 1);
+		transform-origin: right center;
+		transition: transform 0.5s ease;
+	}
+
+	&:hover {
+		&::before {
+			transform: scale3d(1, 1, 1);
+			transform-origin: left center;
+		}
+	}
+}

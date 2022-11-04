@@ -1,0 +1,56 @@
+html {
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+    font: inherit;
+}
+
+body {
+    min-width: 320px;
+    overflow-x: hidden;
+    font-family: $font-opensans;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #ffffff;
+}
+input, input:focus, input:active {
+    outline: none;
+    border: none;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+textarea {
+    resize: none;
+}
+
+button {
+    border: none;
+    outline: none;
+}
+
+
+// Import mixins
+@import 'mixin';
+
+.wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+.main {
+    flex: 1 0 auto;
+}
+.footer {
+    flex: 0 0 auto;
+}
